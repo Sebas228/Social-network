@@ -1,13 +1,139 @@
-body {
+:root {
+  --primary-color: #2980b9;
+  --secondary-color: #B92980;
+  --font-color: #424242;
+  --bg-color: #ecf0f1;
+  --bg-color-secondary: #fff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #2980b9;
+  --secondary-color: #B92980;
+  --font-color: #ecf0f1;
+  --bg-color: #424242;
+  --bg-color-secondary: #4e4e4e;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pointer {
+  cursor: pointer;
 }
+
+/* Auth Button --------------------------------------------  */
+
+.auth-button {
+  display: block;
+  background: white;
+  color: #444;
+  width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  white-space: nowrap;
+  margin: 0 auto;
+  transition: box-shadow .3s ease;
+}
+
+.auth-button:hover {
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px 1.5px grey;
+}
+
+.auth-button span.label {
+  font-family: serif;
+  font-weight: normal;
+}
+
+.auth-button span.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+
+.auth-button span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* END Auth Button --------------------------------------------  */
+
+/* Login --------------------------------------------------- */
+
+.login-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-screen .login-container {
+  border-radius: 5px;
+  background-color: var(--bg-color-secondary);
+  padding: 24px;
+
+  max-width: 350px;
+
+  -webkit-box-shadow: 1px -2px 15px 1px rgba(0,0,0,0.24); 
+  box-shadow: 1px -2px 15px 1px rgba(0,0,0,0.24);
+}
+
+.login-screen .login-container h1 {
+  margin-bottom: 10px;
+}
+
+.login-screen .login-container p {
+  margin-bottom: 25px;
+}
+
+/* End Login --------------------------------------------------- */
+
+/* Home -------------------------------------------------------- */
+
+.main-content {
+  background-color: var(--bg-color-secondary);
+
+  -webkit-box-shadow: 1px 0px 3px 1px rgba(0,0,0,0.18); 
+  box-shadow: 1px 0px 3px 1px rgba(0,0,0,0.18);
+}
+
+.content {
+  max-width: 80%;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+@media (max-width: 575px) {
+  .content {
+    flex-direction: column;
+  }  
+}
+
+/* End Home ---------------------------------------------------- */

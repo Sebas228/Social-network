@@ -1,0 +1,13 @@
+.divider {
+  width: 100%; 
+  height: 13px; 
+  border-bottom: 1px solid #ccc; 
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.divider span { 
+  background-color: var(--bg-color-secondary); 
+  padding: 0 10px;
+}

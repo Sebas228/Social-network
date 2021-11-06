@@ -1,5 +1,12 @@
-import * as firebase from 'firebase/app';
-import 'firebase/auth';
+import { initializeApp } from 'firebase/app';
+import {
+  GoogleAuthProvider,
+  GithubAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut
+} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyD985hh9V40kXC57q44SH-YTWKpAF0Sf9o",
@@ -10,12 +17,16 @@ const firebaseConfig = {
   appId: "1:263040647736:web:db78b670795002a8755ccd"
 };
 
-const app = firebase.initializeApp(firebaseConfig);
-const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-const githubAuthProvider = new firebase.auth.GithubAuthProvider();
+const app = initializeApp(firebaseConfig);
+const googleAuthProvider = new GoogleAuthProvider();
+const githubAuthProvider = new GithubAuthProvider();
 
 export {
   app,
   googleAuthProvider,
-  githubAuthProvider
+  githubAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut
 };

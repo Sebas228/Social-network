@@ -1,10 +1,12 @@
-import './App.css';
+import { AuthProvider } from './context/AuthContext';
 
-function App() {
+import AppRouter from './routers/AppRouter';
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hi</h1>
-    </div>
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   );
 }
 
