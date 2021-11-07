@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 
 import { CSSTransition } from 'react-transition-group';
 
-import './Modal.css';
+import './modal.css';
+
+const { useEffect } = React;
 
 const Modal = ({
   show,
   onClose,
   title,
-  children
+  children,
+  position = 'center',
+  transitionProps
 }) => {
 
   const closeOnEscapeKeyDown = e => {
@@ -33,11 +37,12 @@ const Modal = ({
       in={show}
       unmountOnExit
       timeout={{ enter: 0, exit: 300 }}
+      {...transitionProps}
     >
-      <div className="modal" onClick={onClose}>
+      <div className={`modal ${position === 'center' ? 'center' : 'right'}`} onClick={onClose}>
         <div className="modal-content" onClick={e => e.stopPropagation()}>
           <div className="modal-header">
-            <h4 className="modal-title">{title}</h4>
+            <h3 className="modal-title">{title}</h3>
           </div>
           <div className="modal-body">{children}</div>
           <div className="modal-footer">
