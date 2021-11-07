@@ -32,7 +32,7 @@ const Modal = ({
     return () => {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
     };
-
+    // eslint-disable-next-line
   }, []);
 
   return ReactDOM.createPortal(

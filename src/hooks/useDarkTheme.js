@@ -24,6 +24,7 @@ const useDarkTheme = () => {
       toggleDarkTheme(themeStoraged);
     }
 
+    // eslint-disable-next-line
   }, []);
 
   return [theme, toggleDarkTheme];

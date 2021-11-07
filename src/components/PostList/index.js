@@ -47,6 +47,7 @@ const PostList = ({ tagSelected }) => {
 
   useEffect(() => {
     loadPost();
+    // eslint-disable-next-line
   }, [tagSelected]);
 
   return (
