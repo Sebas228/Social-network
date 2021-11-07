@@ -1,5 +1,8 @@
 .button-base {
-  background-color: var(--primary-color);
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  font-size: 1.05em;
+  font-weight: 300;
   border: none;
   border-radius: 3px;
   cursor: pointer;
