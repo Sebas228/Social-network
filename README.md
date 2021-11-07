@@ -13,6 +13,7 @@ implementaciones actuales:
 - Listado de tags para filtrar los post
 - Modal para mostrar el perfil del usuario creador de cada post
 - Listado de comentarios de cada post
+- Modo oscuro 
 
 ## Instalación
 
