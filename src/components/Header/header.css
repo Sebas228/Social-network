@@ -22,3 +22,15 @@
 .user-options {
   margin-left: auto;
 }
+
+.toggle-theme {
+  margin-right: 15px;
+}
+
+.icon-toggle {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

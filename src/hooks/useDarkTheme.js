@@ -10,8 +10,6 @@ const useDarkTheme = () => {
       ? storagedTheme
       : theme === 'light' ? 'dark' : 'light';
 
-    console.log(newTheme);
-
     localStorage.setItem('theme', newTheme);
     document.body.dataset.theme = newTheme;
     setTheme(newTheme);

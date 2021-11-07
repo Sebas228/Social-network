@@ -1,6 +1,7 @@
+import Switch from "react-switch";
 import './header.css';
 
-import { HiOutlineLogout } from 'react-icons/hi';
+import { HiOutlineLogout, HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
@@ -9,7 +10,7 @@ import { ThemeContext } from '../../context/ThemeProvider';
 const Header = () => {
 
   const { user, logout } = useContext(AuthContext);
-  const { toggleDarkTheme } = useContext(ThemeContext);
+  const { theme, toggleDarkTheme } = useContext(ThemeContext);
 
   return (
     <div className="header">
@@ -19,7 +20,19 @@ const Header = () => {
       </div>
 
       <div className="user-options">
-        <button onClick={() => toggleDarkTheme()}>DarkMode</button>
+
+        <Switch
+          checked={theme === 'dark'}
+          onChange={() => toggleDarkTheme()}
+          uncheckedIcon={<div className="icon-toggle"><HiOutlineMoon /></div>}
+          checkedIcon={<div className="icon-toggle"><HiOutlineSun /></div>}
+          height={23}
+          width={58}
+          handleDiameter={18}
+          onColor="#424242"
+          className="toggle-theme"
+        />
+
         <HiOutlineLogout
           className="pointer"
           size="1.3em"
