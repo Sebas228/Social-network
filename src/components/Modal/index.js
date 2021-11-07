@@ -2,6 +2,9 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 
 import { CSSTransition } from 'react-transition-group';
+import { HiX } from 'react-icons/hi';
+
+import Button from '../Button';
 
 import './modal.css';
 
@@ -42,13 +45,18 @@ const Modal = ({
       <div className={`modal ${position === 'center' ? 'center' : 'right'}`} onClick={onClose}>
         <div className="modal-content" onClick={e => e.stopPropagation()}>
           <div className="modal-header">
-            <h3 className="modal-title">{title}</h3>
+            <h3 className="modal-title">
+              {title}
+              <HiX
+                className="pointer"
+                size="1.2em"
+                onClick={onClose}
+              />
+            </h3>
           </div>
           <div className="modal-body">{children}</div>
           <div className="modal-footer">
-            <button onClick={onClose} className="button">
-              Cerrar
-            </button>
+            <Button text="Cerrar" handleClick={onClose} />
           </div>
         </div>
       </div>
