@@ -5,6 +5,15 @@ una API que nos provee de datos falsos para su uso de demostración.
 
 https://dummyapi.io/
 
+implementaciones actuales:
+
+- Inicio de sesión con Google y Github (Usando firebase)
+- Rutas protegidas por autenticación
+- Listado de Post en la página principal
+- Listado de tags para filtrar los post
+- Modal para mostrar el perfil del usuario creador de cada post
+- Listado de comentarios de cada post
+
 ## Instalación
 
 Clona el repositorio
