@@ -1,0 +1,19 @@
+.comment-card {
+  padding: 10px;
+  border-radius: 10px;
+  border: thin solid #aaa;
+  margin-bottom: 15px;
+}
+
+.comment-card .comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-card .comment-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
